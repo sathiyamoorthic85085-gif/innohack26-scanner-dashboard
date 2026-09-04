@@ -1,4 +1,5 @@
 export type MealSlotId =
+  | "attendance"
   | "sep24_mrng_snacks"
   | "sep24_night_dinner"
   | "sep24_night_snacks"
@@ -15,6 +16,13 @@ export interface MealSlotDefinition {
 }
 
 export const MEAL_SCHEDULE: MealSlotDefinition[] = [
+  {
+    id: "attendance",
+    name: "General Attendance",
+    slot: "Event Check-in",
+    type: "food",
+    timeWindow: "Anytime",
+  },
   {
     id: "sep24_mrng_snacks",
     name: "24th Sep Morning Snacks",
